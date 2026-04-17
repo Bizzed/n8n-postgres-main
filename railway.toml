@@ -1,0 +1,16 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# Railway deployment configuration for n8n-postgres-main
+# Docs: https://docs.railway.com/reference/config-as-code
+# ─────────────────────────────────────────────────────────────────────────────
+
+[build]
+builder = "dockerfile"
+dockerfilePath = "Dockerfile"
+
+[deploy]
+# n8n exposes a /healthz endpoint out of the box
+healthcheckPath = "/healthz"
+# Allow up to 5 min for n8n to run DB migrations on first boot
+healthcheckTimeout = 300
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 10

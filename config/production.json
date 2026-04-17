@@ -1,0 +1,31 @@
+{
+  "_comment": "Non-secret runtime defaults baked into the Docker image. Env vars set in Railway always take precedence over values here. Do not put secrets, credentials, or host-specific values in this file.",
+
+  "executions": {
+    "mode": "regular",
+
+    "pruneData": true,
+    "pruneDataMaxAge": 336,
+    "pruneDataMaxCount": 10000,
+
+    "saveDataOnError": "all",
+    "saveDataOnSuccess": "none",
+    "saveDataManualExecutions": true,
+
+    "timeout": 3600,
+    "maxTimeout": 7200
+  },
+
+  "logging": {
+    "level": "info",
+    "outputs": ["console"]
+  },
+
+  "generic": {
+    "timezone": "America/New_York"
+  },
+
+  "diagnostics": {
+    "enabled": false
+  }
+}
