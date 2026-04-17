@@ -18,7 +18,7 @@
 !packages/@n8n/task-runner-python
 !packages/@n8n/task-runner-python/**
 
-# === Bizzed deployment config ===
+# === Bizzed deployment config (must NOT go inside .n8n — n8n uses .n8n/config as its own settings file) ===
 !config
 !config/**
 

@@ -22,7 +22,7 @@ FROM n8nio/n8n:${N8N_VERSION}
 # ── Config ────────────────────────────────────────────────────────────────────
 # Non-secret defaults are baked into the image via production.json.
 # Secrets and host-specific values are injected at runtime via Railway env vars.
-COPY --chown=node:node config/ /home/node/.n8n/config/
-ENV N8N_CONFIG_FILES=/home/node/.n8n/config/production.json
+COPY --chown=node:node config/ /home/node/bizzed-config/
+ENV N8N_CONFIG_FILES=/home/node/bizzed-config/production.json
 
 EXPOSE 5678
